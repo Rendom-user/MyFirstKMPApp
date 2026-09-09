@@ -1,41 +1,65 @@
-This is a Kotlin Multiplatform project targeting Android, Web, Desktop (JVM).
+# MyFirstKMPApp
 
-* [/shared](./shared/src) is for code that will be shared across your Compose Multiplatform applications.
-  It contains several subfolders:
-  - [commonMain](./shared/src/commonMain/kotlin) is for code that’s common for all targets.
-  - Other folders are for Kotlin code that will be compiled for only the platform indicated in the folder name.
-    For example, if you want to use Apple’s CoreCrypto for the iOS part of your Kotlin app,
-    the [iosMain](./shared/src/iosMain/kotlin) folder would be the right place for such calls.
-    Similarly, if you want to edit the Desktop (JVM) specific part, the [jvmMain](./shared/src/jvmMain/kotlin)
-    folder is the appropriate location.
+Praktikum 1 - Pengenalan Kotlin Multiplatform dan Setup Environment
 
-### Running the apps
+## Identitas
 
-Use the run configurations provided by the run widget in your IDE's toolbar. You can also use these commands and options:
+- **Nama:** Hezkiel
+- **NIM:** 123140118
+- **Program Studi:** Teknik Informatika
+- **Mata Kuliah:** Pengembangan Aplikasi Mobile
 
-- Android app: `./gradlew :androidApp:assembleDebug`
-- Desktop app:
-  - Hot reload: `./gradlew :desktopApp:hotRun --auto`
-  - Standard run: `./gradlew :desktopApp:run`
-- Web app:
-  - Wasm target (faster, modern browsers): `./gradlew :webApp:wasmJsBrowserDevelopmentRun`
-  - JS target (slower, supports older browsers): `./gradlew :webApp:jsBrowserDevelopmentRun`
+## Deskripsi
 
-### Running tests
+MyFirstKMPApp adalah aplikasi sederhana yang dibuat menggunakan Kotlin Multiplatform (KMP).
 
-Use the run button in your IDE's editor gutter, or run tests using Gradle tasks:
+Aplikasi ini menampilkan:
+- Nama mahasiswa
+- NIM mahasiswa
+- Platform yang sedang digunakan untuk menjalankan aplikasi
 
-- Android tests: `./gradlew :shared:testAndroidHostTest`
-- Desktop tests: `./gradlew :shared:jvmTest`
-- Web tests:
-  - Wasm target: `./gradlew :shared:wasmJsTest`
-  - JS target: `./gradlew :shared:jsTest`
+## Platform
 
----
+Project ini berhasil dijalankan pada:
 
-Learn more about [Kotlin Multiplatform](https://www.jetbrains.com/help/kotlin-multiplatform-dev/get-started.html),
-[Compose Multiplatform](https://kotlinlang.org/compose-multiplatform/),
-[Kotlin/Wasm](https://kotl.in/wasm/)…
+- Android
+- Desktop
 
-We would appreciate your feedback on Compose/Web and Kotlin/Wasm in the public Slack channel [#compose-web](https://slack-chats.kotlinlang.org/c/compose-web).
-If you face any issues, please report them on [YouTrack](https://youtrack.jetbrains.com/newIssue?project=CMP).
+## Tampilan Aplikasi
+
+### Android
+
+Aplikasi menampilkan:
+
+- Halo, Hezkiel!
+- NIM: 123140118
+- Platform: Android 37
+
+### Desktop
+
+Aplikasi menampilkan:
+
+- Halo, Hezkiel!
+- NIM: 123140118
+- Platform: Java 21.0.11
+
+## Teknologi
+
+- Kotlin Multiplatform
+- Compose Multiplatform
+- Gradle Kotlin DSL
+- Android Studio
+- Git & GitHub
+
+## Struktur Project
+
+```text
+MyFirstKMPApp/
+├── androidApp/
+├── desktopApp/
+├── shared/
+├── webApp/
+├── gradle/
+├── build.gradle.kts
+├── settings.gradle.kts
+└── README.md
